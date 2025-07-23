@@ -4,6 +4,14 @@ export const Projects = () => {
     <>
       <ProjectHeader>PROJECTS</ProjectHeader>
       <ProjectContainer>
+        <div>
+          <a
+            href="https://voting-machine-ui.vercel.app/user/login"
+            target="_blank"
+          >
+            <img src="/votingapp.png" alt="votingapp_image" />
+          </a>
+        </div>
         {/* project 1 */}
         <div>
           <a href="https://dashfront-wheat.vercel.app/" target="_blank">
