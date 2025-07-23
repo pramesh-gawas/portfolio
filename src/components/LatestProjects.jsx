@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const LatestProjects = () => {
   return (
     <>
-      {" "}
       <LProjects>
         <Content>
           <h3>Voting App E-vote Hub</h3>
@@ -14,61 +13,63 @@ export const LatestProjects = () => {
               incorporating robust authentication, administrative controls, and
               a clear voting mechanism.
             </b>
+            <ul>
+              <li>
+                <strong>Aadhar-Based User Authentication:</strong> Users can
+                securely sign in to the application using their Aadhar card
+                number, serving as a primary identifier for registration and
+                login.
+              </li>
+              <li>
+                <strong>User Profile & Image Upload:</strong> During
+                registration or profile management, users are required to upload
+                their image, enhancing the visual verification and
+                personalization of their accounts.
+              </li>
+              <li>
+                <strong>Candidate Voting:</strong> Registered and authenticated
+                users can browse a list of candidates and cast their vote for
+                their preferred choice.
+              </li>
+              <li>
+                <strong>Single Vote Per User:</strong> A critical feature
+                ensuring fairness and integrity, each user is strictly limited
+                to casting only one vote per election. Once a vote is cast, the
+                user cannot vote again.
+              </li>
+              <li>
+                <strong>Password Recovery:</strong> Users who forget their
+                password can initiate a recovery process through their
+                registered email address, receiving a secure link to reset their
+                credentials.
+              </li>
+              <li>
+                <strong>Comprehensive Admin Control:</strong> The application
+                includes a dedicated administrative interface with exclusive
+                access for a single designated admin. The admin has full control
+                over:
+                <ul>
+                  <li>
+                    <strong>Candidate Management:</strong> The ability to add
+                    new candidates, update existing candidate details, and
+                    delete candidates from the system.
+                  </li>
+                  <li>
+                    <strong>User Management:</strong> The ability to add new
+                    users, update user information, and delete users from the
+                    system.
+                  </li>
+                  <li>
+                    <strong>Admin Voting Restriction:</strong> Crucially, the
+                    admin account is explicitly restricted from voting in any
+                    election, maintaining impartiality and preventing conflict
+                    of interest.
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </p>
-          <ul>
-            <li>
-              <strong>Aadhar-Based User Authentication:</strong> Users can
-              securely sign in to the application using their Aadhar card
-              number, serving as a primary identifier for registration and
-              login.
-            </li>
-            <li>
-              <strong>User Profile & Image Upload:</strong> During registration
-              or profile management, users are required to upload their image,
-              enhancing the visual verification and personalization of their
-              accounts.
-            </li>
-            <li>
-              <strong>Candidate Voting:</strong> Registered and authenticated
-              users can browse a list of candidates and cast their vote for
-              their preferred choice.
-            </li>
-            <li>
-              <strong>Single Vote Per User:</strong> A critical feature ensuring
-              fairness and integrity, each user is strictly limited to casting
-              only one vote per election. Once a vote is cast, the user cannot
-              vote again.
-            </li>
-            <li>
-              <strong>Password Recovery:</strong> Users who forget their
-              password can initiate a recovery process through their registered
-              email address, receiving a secure link to reset their credentials.
-            </li>
-            <li>
-              <strong>Comprehensive Admin Control:</strong> The application
-              includes a dedicated administrative interface with exclusive
-              access for a single designated admin. The admin has full control
-              over:
-              <ul>
-                <li>
-                  <strong>Candidate Management:</strong> The ability to add new
-                  candidates, update existing candidate details, and delete
-                  candidates from the system.
-                </li>
-                <li>
-                  <strong>User Management:</strong> The ability to add new
-                  users, update user information, and delete users from the
-                  system.
-                </li>
-                <li>
-                  <strong>Admin Voting Restriction:</strong> Crucially, the
-                  admin account is explicitly restricted from voting in any
-                  election, maintaining impartiality and preventing conflict of
-                  interest.
-                </li>
-              </ul>
-            </li>
-          </ul>
+
           <h3>Languages and Libraries</h3>
           <p>
             <b>MERN Multer,nodemailer,material UI</b>{" "}

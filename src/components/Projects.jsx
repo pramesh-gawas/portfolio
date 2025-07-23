@@ -50,7 +50,7 @@ const ProjectHeader = styled.h2`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 15px;
+  /* margin-top: 15px; */
   font-size: 30px;
 `;
 
