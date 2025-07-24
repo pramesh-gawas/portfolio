@@ -32,9 +32,38 @@ export const Header = () => {
 };
 
 const Nav = styled.div`
-  ul {
-    align-items: center;
+  .nav {
+    position: fixed;
+    width: 100%;
+    top: 27px;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1000;
+
+    background-color: #008dd5;
+    font-weight: 600;
+    color: white;
+    padding: 10px 0;
+    margin: 0;
+
+    display: flex;
     justify-content: center;
-    margin: 20px;
+    align-items: center;
+    list-style: none;
+  }
+
+  .nav-item {
+    padding: 0 15px;
+  }
+
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 5px 0;
+    display: block;
+  }
+
+  .nav-link:hover {
+    color: #f0f0f0;
   }
 `;

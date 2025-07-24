@@ -33,7 +33,7 @@ const Main = styled.div`
   border-radius: 20px;
   border-color: black;
   padding: 10px;
-  margin: 0px 30px;
+  margin: 50px 30px;
   height: 460px;
 
   @media screen and (max-width: 768px) {

@@ -6,13 +6,15 @@ export const LatestProjects = () => {
       <LProjects>
         <Content>
           <h3>Voting App E-vote Hub</h3>
-          <p>
-            <b>
-              This voting application is designed to provide a secure,
-              user-friendly, and transparent platform for conducting elections,
-              incorporating robust authentication, administrative controls, and
-              a clear voting mechanism.
-            </b>
+          <div>
+            <p>
+              <b>
+                This voting application is designed to provide a secure,
+                user-friendly, and transparent platform for conducting
+                elections, incorporating robust authentication, administrative
+                controls, and a clear voting mechanism.
+              </b>
+            </p>
             <ul>
               <li>
                 <strong>Aadhar-Based User Authentication:</strong> Users can
@@ -68,7 +70,7 @@ export const LatestProjects = () => {
                 </ul>
               </li>
             </ul>
-          </p>
+          </div>
 
           <h3>Languages and Libraries</h3>
           <p>
@@ -93,16 +95,18 @@ export const LatestProjects = () => {
         </Project>
         <Content>
           <h3>DashBoard</h3>
-          <p>
-            <b>
-              {" "}
-              A web application built using the MERN stack (MongoDB, Express.js,
-              React, Node.js) retrieves data from a MongoDB Atlas database.
-              Users can select various filters to refine the data, and the
-              application then generates a visual representation of the filtered
-              data in the form of a graph.
-            </b>
-          </p>
+          <div>
+            {" "}
+            <p>
+              <b>
+                A web application built using the MERN stack (MongoDB,
+                Express.js, React, Node.js) retrieves data from a MongoDB Atlas
+                database. Users can select various filters to refine the data,
+                and the application then generates a visual representation of
+                the filtered data in the form of a graph.
+              </b>
+            </p>
+          </div>
           <h3>Languages and Libraries</h3>
           <p>
             <b>
@@ -117,15 +121,18 @@ export const LatestProjects = () => {
       <LProjects>
         <Content>
           <h3>Furniture store</h3>
-          <p>
-            <b>
-              This project showcases a furniture store website built with React
-              JS and Bootstrap. It leverages an API to dynamically populate
-              product information, allowing users to browse and explore a wide
-              range of furniture options. The responsive design ensures a
-              seamless shopping experience across different devices.
-            </b>
-          </p>
+          <div>
+            {" "}
+            <p>
+              <b>
+                This project showcases a furniture store website built with
+                React JS and Bootstrap. It leverages an API to dynamically
+                populate product information, allowing users to browse and
+                explore a wide range of furniture options. The responsive design
+                ensures a seamless shopping experience across different devices.
+              </b>
+            </p>
+          </div>
           <h3>Languages and Libraries</h3>
           <p>
             <b>HTML,css, javascript,React,bootsrap,api</b>
@@ -150,15 +157,18 @@ export const LatestProjects = () => {
         </Project>
         <Content>
           <h3>Task Manager</h3>
-          <p>
-            <b>
-              This project demonstrates a to-do list application developed using
-              the MERN stack (MongoDB, Express.js, React, Node.js) and
-              Bootstrap. Users can create, edit, and delete tasks, as well as
-              mark them as completed. The application offers a user-friendly
-              interface with features like task prioritization and filtering.
-            </b>
-          </p>
+          <div>
+            {" "}
+            <p>
+              <b>
+                This project demonstrates a to-do list application developed
+                using the MERN stack (MongoDB, Express.js, React, Node.js) and
+                Bootstrap. Users can create, edit, and delete tasks, as well as
+                mark them as completed. The application offers a user-friendly
+                interface with features like task prioritization and filtering.
+              </b>
+            </p>
+          </div>
           <h3>Languages and Libraries</h3>
           <p>
             <b>
@@ -172,16 +182,18 @@ export const LatestProjects = () => {
       <LProjects>
         <Content>
           <h3>Food Store</h3>
-          <p>
-            <b>
-              {" "}
-              This project showcases a food app built using React and
-              styled-components. Users can search for food items across
-              breakfast, lunch, and dinner categories. The app offers a visually
-              appealing interface and provides a seamless user experience for
-              discovering and exploring food options.
-            </b>
-          </p>
+          <div>
+            {" "}
+            <p>
+              <b>
+                This project showcases a food app built using React and
+                styled-components. Users can search for food items across
+                breakfast, lunch, and dinner categories. The app offers a
+                visually appealing interface and provides a seamless user
+                experience for discovering and exploring food options.
+              </b>
+            </p>
+          </div>
           <h3>Languages and Libraries</h3>
           <p>
             <b>html,css,javascript,React js,styled-components</b>
@@ -229,6 +241,16 @@ const Content = styled.div`
   flex-direction: column;
   width: 100%;
 
+  div {
+    border-radius: 10px;
+    height: 225px;
+    overflow: auto;
+    border: 1px solid black;
+    padding: 5px;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
   h3 {
     font-size: 20px;
     height: 40px;
@@ -238,7 +260,7 @@ const Content = styled.div`
     background-color: #008dd5;
     border: none;
   }
-  p {
+  /* p {
     border-radius: 10px;
     height: 145px;
     overflow: auto;
@@ -246,5 +268,5 @@ const Content = styled.div`
     padding: 5px;
     font-size: 18px;
     font-weight: 400;
-  }
+  } */
 `;
