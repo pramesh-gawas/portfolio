@@ -240,7 +240,8 @@ const Content = styled.div`
   }
   p {
     border-radius: 10px;
-    height: fit-content;
+    height: 145px;
+    overflow: auto;
     border: 1px solid black;
     padding: 5px;
     font-size: 18px;
