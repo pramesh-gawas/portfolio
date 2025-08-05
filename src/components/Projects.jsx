@@ -14,7 +14,7 @@ export const Projects = () => {
         </div>
         {/* project 1 */}
         <div>
-          <a href="https://dashfront-wheat.vercel.app/" target="_blank">
+          <a href="https://dashboard-tf3x.vercel.app/" target="_blank">
             <img src="/dashboard_tab.png" alt="dashboard_image" />
           </a>
         </div>
