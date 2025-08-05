@@ -89,7 +89,7 @@ export const LatestProjects = () => {
       {/*    project 1 */}
       <LProjects>
         <Project>
-          <a href="https://dashfront-wheat.vercel.app/" target="_blank">
+          <a href="https://dashboard-tf3x.vercel.app/" target="_blank">
             <img src="/dashboard_tab.png" alt="dashboard_project" />
           </a>
         </Project>
