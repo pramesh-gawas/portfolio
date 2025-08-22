@@ -35,17 +35,16 @@ const Nav = styled.div`
   .nav {
     position: fixed;
     width: 100%;
-    top: 27px;
-    left: 0;
+    top: 30px;
+    left: 0px;
     transform: translateY(-50%);
     z-index: 1000;
-
+    border-radius: 20px;
     background-color: #008dd5;
     font-weight: 600;
     color: white;
     padding: 10px 0;
-    margin: 0;
-
+    margin: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
