@@ -1,6 +1,39 @@
 import styled from "styled-components";
+import { SendMail } from "../apiIntegration/Api";
+import { useState } from "react";
 
 export const Contact = () => {
+  const [formData, setFormData] = useState({
+    email: "",
+    text: "",
+  });
+
+  const handleSentMail = async (e) => {
+    e.preventDefault();
+    const objdata = {
+      email: formData.email,
+      obj: formData.text,
+    };
+    const { message, error } = await SendMail(objdata);
+
+    if (message) {
+      alert(message);
+      setFormData({
+        email: "",
+        text: "",
+      });
+    } else {
+      alert(error);
+    }
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
   return (
     <>
       <ContactHeader>Contact</ContactHeader>
@@ -11,11 +44,36 @@ export const Contact = () => {
           </a>
         </Image>
         <ContactDetail>
-          <label htmlFor="email">Gmail</label>
-          <input type="email" name="email" id="" autoComplete="on" />
-          <label htmlFor="text">Text</label>
-          <textarea rows={3} type="text" name="text" id="" />
-          <button>Sent</button>
+          <form onSubmit={handleSentMail}>
+            <label htmlFor="email">Gmail</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              autoComplete="on"
+              value={formData?.email}
+              onChange={handleInputChange}
+            />
+            <label htmlFor="text">Text</label>
+            <textarea
+              rows={3}
+              type="text"
+              name="text"
+              id="text"
+              value={formData?.text}
+              onChange={handleInputChange}
+            />
+            <button>Sent</button>
+            <a
+              href="https://www.linkedin.com/in/pramesh-gawas-9470a7190/"
+              target="_blank"
+            >
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" />
+            </a>
+            <a href="https://github.com/pramesh-gawas" target="_blank">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" />
+            </a>
+          </form>
         </ContactDetail>
       </ContactMain>
     </>
@@ -78,5 +136,10 @@ export const ContactDetail = styled.div`
     width: 100%;
     height: 40px;
     border-radius: 10px;
+  }
+
+  img {
+    padding: 10px;
+    width: 80px;
   }
 `;

@@ -252,6 +252,7 @@ const Content = styled.div`
   }
 
   h3 {
+    color: white;
     font-size: 20px;
     height: 40px;
     border-radius: 10px;

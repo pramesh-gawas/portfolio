@@ -7,14 +7,25 @@ export const Home = () => {
     <>
       <Main>
         <Image>
-          <a href="https://github.com/pramesh-gawas">
+          <a target="_blank" href="https://github.com/pramesh-gawas">
             <img src="/avatar.jpg" alt="profile_pic" />
           </a>
         </Image>
         <Content>
-          <h1>Pramesh Gawas</h1>
-          <h2>Web developer</h2>
-          <h4>"MERN Stack Developer: Bringing Ideas to Life"</h4>
+          <div style={{ display: "flex" }}>
+            <div style={{ width: "50%" }}>
+              <h2>Hi 👋, I'm Pramesh</h2>
+              <p>
+                <b>"MERN Stack Developer: Bringing Ideas to Life"</b>
+              </p>
+            </div>
+            <div>
+              <img
+                src="https://camo.githubusercontent.com/1a603a5c1c96760442cd78922f90bdb813385c624e01d88e2236051a0c3e4bc9/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67733f757365726e616d653d7072616d6573682d67617761732673686f775f69636f6e733d74727565266c6f63616c653d656e266c61796f75743d636f6d70616374"
+                alt=""
+              />
+            </div>
+          </div>
           <IconImage>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" />
 
