@@ -51,6 +51,7 @@ export const Contact = () => {
               name="email"
               id="email"
               autoComplete="on"
+              placeholder="Enter your email here"
               value={formData?.email}
               onChange={handleInputChange}
             />
@@ -60,19 +61,28 @@ export const Contact = () => {
               type="text"
               name="text"
               id="text"
+              placeholder="Enter text message for me here"
               value={formData?.text}
               onChange={handleInputChange}
             />
-            <button>Sent</button>
-            <a
-              href="https://www.linkedin.com/in/pramesh-gawas-9470a7190/"
-              target="_blank"
-            >
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" />
-            </a>
-            <a href="https://github.com/pramesh-gawas" target="_blank">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" />
-            </a>
+            <button>Send</button>
+            <div style={{ display: "flex", gap: "10px" }}>
+              <a
+                href="https://www.linkedin.com/in/pramesh-gawas-9470a7190/"
+                target="_blank"
+              >
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg"
+                  style={{ backgroundColor: "white", borderRadius: "5px" }}
+                />
+              </a>
+              <a href="https://github.com/pramesh-gawas" target="_blank">
+                <img
+                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg"
+                  style={{ backgroundColor: "white", borderRadius: "5px" }}
+                />
+              </a>
+            </div>
           </form>
         </ContactDetail>
       </ContactMain>
@@ -92,12 +102,14 @@ export const ContactMain = styled.div`
   align-items: center;
   justify-content: center;
   margin: 2px;
+  padding: 20px;
 `;
 
 export const Image = styled.div`
   img {
     width: 80%;
     height: 100%;
+    border-radius: 50%;
   }
 `;
 export const ContactDetail = styled.div`
@@ -107,6 +119,7 @@ export const ContactDetail = styled.div`
 
   input {
     width: 100%;
+    height: 50px;
     font-size: 18px;
     border-radius: 10px;
     padding-left: 5px;
@@ -114,6 +127,7 @@ export const ContactDetail = styled.div`
 
   textarea {
     width: 100%;
+    padding: 10px;
     font-size: 18px;
     border-radius: 10px;
     padding-left: 10px;
@@ -127,6 +141,7 @@ export const ContactDetail = styled.div`
     font-size: 20px;
     background-color: white;
     border: none;
+    border-radius: 5px;
     outline: none;
     padding-top: 2px;
     margin-left: 4px;
@@ -134,8 +149,10 @@ export const ContactDetail = styled.div`
 
   button {
     width: 100%;
+    font-weight: 700;
     height: 40px;
     border-radius: 10px;
+    background-color: #008dd5;
   }
 
   img {
