@@ -7,9 +7,7 @@ export const Home = () => {
     <>
       <Main>
         <Image>
-          <a target="_blank" href="https://github.com/pramesh-gawas">
-            <img src="/avatar.jpg" alt="profile_pic" />
-          </a>
+          <img src="/avatar.jpg" alt="profile_pic" />
         </Image>
         <Content>
           <div style={{ display: "flex" }}>
@@ -75,16 +73,16 @@ const Main = styled.div`
 `;
 
 const Image = styled.div`
+  width: 100%;
+  height: 440px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
   img {
     width: 100%;
-    height: 450px;
+    height: inherit;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
   }
-  width: 100%;
-  height: auto;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
 `;
 
 const Content = styled.div`

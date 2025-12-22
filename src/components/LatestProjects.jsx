@@ -245,7 +245,7 @@ const Content = styled.div`
     border-radius: 10px;
     height: 225px;
     overflow: auto;
-    border: 1px solid black;
+    outline: 2px solid #008dd5;
     padding: 5px;
     font-size: 18px;
     font-weight: 400;
