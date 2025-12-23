@@ -6,6 +6,7 @@ import { About } from "./components/About";
 import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { DetailPage } from "./components/DetailPage";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/Contact",
         element: <Contact></Contact>,
+      },
+      {
+        path: "/Detail/:Id",
+        element: <DetailPage></DetailPage>,
       },
     ],
   },

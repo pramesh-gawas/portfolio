@@ -39,9 +39,7 @@ export const Contact = () => {
       <ContactHeader>Contact</ContactHeader>
       <ContactMain>
         <Image>
-          <a href="https://github.com/pramesh-gawas">
-            <img src="/avatar.jpg" alt="github_image" />
-          </a>
+          <img src="/avatar.jpg" alt="github_image" />
         </Image>
         <ContactDetail>
           <form onSubmit={handleSentMail}>
@@ -66,7 +64,14 @@ export const Contact = () => {
               onChange={handleInputChange}
             />
             <button>Send</button>
-            <div style={{ display: "flex", gap: "10px" }}>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                gap: "20px",
+                padding: "10px",
+              }}
+            >
               <a
                 href="https://www.linkedin.com/in/pramesh-gawas-9470a7190/"
                 target="_blank"
@@ -82,6 +87,15 @@ export const Contact = () => {
                   style={{ backgroundColor: "white", borderRadius: "5px" }}
                 />
               </a>
+              <a
+                target="_blank"
+                href="https://mail.google.com/mail/u/1/?pli=1#inbox?compose=DmwnWrRqhsPbhnfQNBMrsmWRxCkXXtSLDZwMdWsfwmHNgVJPFrKXwnBTDWFLpbcVXGTgRKvZmRtL"
+              >
+                <img
+                  src="./gmail.png"
+                  style={{ backgroundColor: "white", borderRadius: "5px" }}
+                />
+              </a>
             </div>
           </form>
         </ContactDetail>
@@ -94,15 +108,17 @@ const ContactHeader = styled.div`
   display: flex;
   justify-content: center;
   font-size: 30px;
-  font-weight: 600;
+  margin-top: 70px;
+  font-weight: 700;
 `;
 
 export const ContactMain = styled.div`
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   margin: 2px;
-  padding: 20px;
+  padding: 34px;
+  min-height: 620px;
 `;
 
 export const Image = styled.div`
