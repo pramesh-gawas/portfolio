@@ -26,7 +26,9 @@ export const LatestProjects = () => {
 
   useEffect(() => {
     const fetchProjects = async () => {
-      const baseUrl = import.meta.env.VITE_API_URL;
+      const baseUrl =
+        import.meta.env.VITE_API_URL ||
+        "https://portfolio-backend-79t2.onrender.com";
       const url = `${baseUrl}/admin/all-projects?page=${currentPage}`;
       try {
         setLoading(true);
