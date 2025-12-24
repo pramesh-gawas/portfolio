@@ -1,10 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useParams, useLocation } from "react-router-dom";
-export const DetailPage = ({
-  languages = ["HTML", "CSS", "JavaScript", "MongoDB"],
-  tools = ["React", "Express.js", "Node.js", "Chart.js", "Bootstrap"],
-}) => {
+export const DetailPage = () => {
   const param = useParams();
   const location = useLocation();
   const project = location.state?.projectData;
@@ -56,7 +53,7 @@ export const DetailPage = ({
               target="_blank"
               rel="noopener noreferrer"
             >
-              <ActionButton primary>Live Demo</ActionButton>
+              <ActionButton>Live Demo</ActionButton>
             </ActionLink>
           )}
         </Actions>
