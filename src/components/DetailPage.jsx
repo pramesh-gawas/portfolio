@@ -18,12 +18,18 @@ export const DetailPage = ({
         <Title>{project?.title}</Title>
 
         <Section>
-          <SectionTitle>Languages & Tools</SectionTitle>
+          <SectionTitle>Languages</SectionTitle>
           <Tags>
-            {languages.map((l) => (
+            {project?.languages.map((l) => (
               <Tag key={l}>{l}</Tag>
             ))}
-            {tools.map((t) => (
+          </Tags>
+        </Section>
+
+        <Section>
+          <SectionTitle>Tools</SectionTitle>
+          <Tags>
+            {project?.tools.map((t) => (
               <Tag key={t}>{t}</Tag>
             ))}
           </Tags>

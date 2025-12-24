@@ -10,8 +10,6 @@ export const LatestProjects = () => {
   const [error, setError] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
 
-  console.log(projects);
-
   const totalPages = projects?.totalPages || 1;
 
   const handleNext = () => {
@@ -35,7 +33,6 @@ export const LatestProjects = () => {
         const data = await GetProjects(url);
         if (data) {
           setProjects(data);
-          console.log(data);
         } else {
           setError("No data received");
         }

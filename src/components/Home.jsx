@@ -3,7 +3,6 @@ import styled from "styled-components";
 import { Contact } from "./Contact";
 import { LatestProjects } from "./LatestProjects";
 export const Home = ({ projects }) => {
-  console.log(projects);
   return (
     <>
       <Main>

@@ -59,7 +59,7 @@ export const About = () => {
             <div className="col-12">
               <h3 className="mb-4">Professional Experience</h3>
               <div className="timeline">
-                <div className="mb-4 ps-4 border-start border-primary border-3">
+                <div className="mb-4 ps-4 border-start border-danger border-3">
                   <h5>Junior Software Applications Development Engineer</h5>
                   <p className=" mb-1">
                     3D System Private Limited | Dec 2024 – May 2025
@@ -80,7 +80,7 @@ export const About = () => {
                   </ul>
                 </div>
 
-                <div className="mb-4 ps-4 border-start border-success border-3">
+                <div className="mb-4 ps-4 border-start border-primary border-3">
                   <h5>Junior Web Developer</h5>
                   <p className=" mb-1">
                     Magica Infotech | Sept 2023 – Oct 2023
@@ -98,6 +98,23 @@ export const About = () => {
                 </div>
               </div>
             </div>
+          </div>
+
+          <div className="mb-4 ps-4 border-start border-success border-3">
+            <h5>Junior Web Developer</h5>
+            <p className="mb-1">The Grit City | Aug 2023 – Sept 2023</p>
+            <ul>
+              <li>
+                Designed and developed a <strong>user-friendly</strong> website
+                using <strong>Wix Studio</strong> for a client.
+              </li>
+              <li>
+                Architected a transition from a{" "}
+                <strong>single-page format</strong> to a{" "}
+                <strong>multi-page structure</strong>, adding 5 new pages to
+                enhance the user experience.
+              </li>
+            </ul>
           </div>
 
           <div className="row mt-5">
@@ -120,8 +137,7 @@ export const About = () => {
                 <h6>FastAPI - The Complete Course 2026</h6>
                 <p className=" small mb-0">Issued by Udemy • Dec 17, 2025</p>
                 <p className="small mt-2">
-                  Specializing in high-performance Python APIs and Pydantic
-                  validation.
+                  FastAPI-The-Complete-Course 2026 (Beginner + Advanced)
                 </p>
               </div>
             </div>
