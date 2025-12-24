@@ -25,9 +25,9 @@ export const LatestProjects = () => {
   };
 
   useEffect(() => {
-    const baseUrl = import.meta.env.VITE_API_URL;
-    const url = `${baseUrl}/admin/all-projects?page=${currentPage}`;
     const fetchProjects = async () => {
+      const baseUrl = import.meta.env.VITE_API_URL;
+      const url = `${baseUrl}/admin/all-projects?page=${currentPage}`;
       try {
         setLoading(true);
         const data = await GetProjects(url);

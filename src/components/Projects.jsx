@@ -10,9 +10,9 @@ export const Projects = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const baseUrl = import.meta.env.VITE_API_URL;
-    const url = `${baseUrl}/admin/all-projects?limit=100`;
     const fetchProjects = async () => {
+      const baseUrl = import.meta.env.VITE_API_URL;
+      const url = `${baseUrl}/admin/all-projects?limit=100`;
       try {
         setLoading(true);
         const data = await GetProjects(url);
