@@ -15,7 +15,6 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        path: "/",
         element: <Home></Home>,
       },
       {
@@ -34,6 +33,7 @@ const router = createBrowserRouter([
         path: "/Detail/:Id",
         element: <DetailPage></DetailPage>,
       },
+      
     ],
   },
 ]);

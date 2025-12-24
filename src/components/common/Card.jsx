@@ -15,13 +15,13 @@ const Card = ({ project }) => {
   const carouselId = `carousel-${project?._id}`;
   return (
     <div className="card" style={{ width: "18rem" }}>
-      <div id={carouselId} class="carousel slide">
-        <div class="carousel-indicators">
+      <div id={carouselId} className="carousel slide">
+        <div className="carousel-indicators">
           <button
             type="button"
             data-bs-target={`#${carouselId}`}
             data-bs-slide-to="0"
-            class="active"
+            className="active"
             aria-current="true"
             aria-label="Slide 1"
           ></button>
@@ -38,38 +38,38 @@ const Card = ({ project }) => {
             aria-label="Slide 3"
           ></button>
         </div>
-        <div class="carousel-inner">
+        <div className="carousel-inner">
           {project?.profileImages?.map((url, index) => (
             <div
               key={index}
-              class={`carousel-item ${index === 0 ? "active" : ""}`}
+              className={`carousel-item ${index === 0 ? "active" : ""}`}
             >
               <img
                 src={url}
                 height={200}
-                class="d-block w-100"
+                className="d-block w-100"
                 alt={project?.data?.ttile}
               />
             </div>
           ))}
         </div>
         <button
-          class="carousel-control-prev"
+          className="carousel-control-prev"
           type="button"
           data-bs-target={`#${carouselId}`}
           data-bs-slide="prev"
         >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
+          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Previous</span>
         </button>
         <button
-          class="carousel-control-next"
+          className="carousel-control-next"
           type="button"
           data-bs-target={`#${carouselId}`}
           data-bs-slide="next"
         >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
+          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span className="visually-hidden">Next</span>
         </button>
       </div>
       <div className="card-body">
