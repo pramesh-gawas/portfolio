@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Contact } from "./Contact";
 import { LatestProjects } from "./LatestProjects";
-export const Home = () => {
+export const Home = ({ projects }) => {
   return (
     <>
       <Main>
@@ -47,8 +47,9 @@ export const Home = () => {
           </IconImage>
         </Content>
       </Main>
-      <LHeader>Latest Projects</LHeader>
-      <LatestProjects></LatestProjects>
+
+      <LatestProjects projects={projects}></LatestProjects>
+
       <Contact></Contact>
     </>
   );
@@ -110,11 +111,4 @@ const IconImage = styled.div`
   img {
     width: 70px;
   }
-`;
-const LHeader = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
-  font-weight: 600;
 `;
