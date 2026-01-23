@@ -8,7 +8,9 @@ export const LatestProjects = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const baseUrl = import.meta.env.VITE_API_URL;
+  const baseUrl =
+    import.meta.env.VITE_API_URL ||
+    "https://portfolio-backend-79t2.onrender.com";
 
   useEffect(() => {
     const fetchProjects = async () => {
