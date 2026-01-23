@@ -40,20 +40,13 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-      <div>
-        <RouterProvider router={router}>
-          <Header></Header>
-          <Home></Home>
-          {/* <Footer></Footer> */}
-        </RouterProvider>
-      </div>
+      <RouterProvider router={router}>
+        <Header></Header>
+        <Home></Home>
+        {/* <Footer></Footer> */}
+      </RouterProvider>
     </>
   );
 }
 
 export default App;
-
-const Div = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
