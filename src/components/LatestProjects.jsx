@@ -8,10 +8,10 @@ export const LatestProjects = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const baseUrl = import.meta.env.VITE_API_URL;
 
   useEffect(() => {
     const fetchProjects = async () => {
-      const baseUrl = import.meta.env.VITE_API_URL;
       const url = `${baseUrl}/admin/all-projects`;
       try {
         setLoading(true);
