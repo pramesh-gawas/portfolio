@@ -46,6 +46,7 @@ const Card = ({ project }) => {
             >
               <img
                 src={url}
+                loading="lazy"
                 height={200}
                 className="d-block w-100"
                 alt={project?.data?.ttile}
@@ -59,7 +60,10 @@ const Card = ({ project }) => {
           data-bs-target={`#${carouselId}`}
           data-bs-slide="prev"
         >
-          <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span
+            className="carousel-control-prev-icon"
+            aria-hidden="true"
+          ></span>
           <span className="visually-hidden">Previous</span>
         </button>
         <button
@@ -68,7 +72,10 @@ const Card = ({ project }) => {
           data-bs-target={`#${carouselId}`}
           data-bs-slide="next"
         >
-          <span className="carousel-control-next-icon" aria-hidden="true"></span>
+          <span
+            className="carousel-control-next-icon"
+            aria-hidden="true"
+          ></span>
           <span className="visually-hidden">Next</span>
         </button>
       </div>

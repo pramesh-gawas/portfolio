@@ -1,0 +1,72 @@
+/* CSS Custom Properties for Light Theme */
+:root {
+  --primary-color: #008dd5;
+  --secondary-color: #00a8e8;
+  --background-color: #ffffff;
+  --text-color: #333333;
+  --card-background: #ffffff;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  --border-color: rgba(255, 255, 255, 0.2);
+  --hover-shadow: 0 15px 35px rgba(0, 141, 213, 0.3);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  --primary-color: #00a8e8;
+  --secondary-color: #008dd5;
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --card-background: #1e1e1e;
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --transition: all 0.3s ease;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --hover-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  transition: var(--transition);
+  min-height: 100vh;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Card Styles */
+.card {
+  width: 820px;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+}

@@ -44,6 +44,18 @@ export const Home = ({ projects }) => {
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original-wordmark.svg" />
 
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" />
+            <img
+              width="48"
+              height="48"
+              src="https://img.icons8.com/color/48/tailwindcss.png"
+              alt="tailwindcss"
+            />
+            <img
+              width="48"
+              height="48"
+              src="https://img.icons8.com/color/48/material-ui.png"
+              alt="material-ui"
+            />
           </IconImage>
         </Content>
       </Main>
@@ -58,37 +70,46 @@ export const Home = ({ projects }) => {
 const Main = styled.div`
   justify-content: center;
   display: flex;
-  box-shadow: -2px -2px rgba(240, 240, 240), 3px 3px black;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 141, 213, 0.1),
+    rgba(0, 168, 232, 0.1)
+  );
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-color);
   flex-direction: row;
-  border-radius: 20px;
-  border-color: black;
-  padding: 10px;
-  margin: 70px 30px;
-  height: 460px;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 100px 30px;
+  height: 500px;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+  }
 
   @media screen and (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
+    height: auto;
+    margin: 80px 15px;
   }
 `;
 
 const Image = styled.div`
   width: 100%;
   height: 440px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
   img {
     width: 100%;
     height: inherit;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    border-radius: 20px;
   }
 `;
 
 const Content = styled.div`
-  background-color: #008dd5;
-  color: #ffff;
+  color: var(--text-color);
   width: 100%;
   height: 440px;
   border-bottom-right-radius: 20px;
@@ -101,14 +122,90 @@ const Content = styled.div`
     padding: 5px;
   }
 
-  @media screen and (max-width: 780px) {
+  @media screen and (max-width: 768px) {
     display: none;
   }
 `;
+const IntroSection = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    text-align: center;
+  }
+`;
+
+const TextSection = styled.div`
+  flex: 1;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 1024px) {
+    h2 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+`;
+
+const StatsSection = styled.div`
+  flex-shrink: 0;
+
+  img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  @media (max-width: 1024px) {
+    img {
+      width: 250px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    img {
+      width: 200px;
+    }
+  }
+`;
+
 const IconImage = styled.div`
   max-height: 440px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  animation: fadeInUp 1.2s ease-out;
 
   img {
     width: 70px;
+    transition: var(--transition);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+
+    &:hover {
+      transform: translateY(-5px) scale(1.1);
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+    }
+
+    @media (max-width: 1024px) {
+      width: 60px;
+    }
+
+    @media (max-width: 768px) {
+      width: 50px;
+    }
   }
 `;

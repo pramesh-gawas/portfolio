@@ -97,7 +97,7 @@ const Info = styled.div`
 const Title = styled.h1`
   margin: 0;
   font-size: 24px;
-  color: #fff;
+  color: var(--text-color);
 `;
 
 const Section = styled.div`
@@ -109,7 +109,7 @@ const Section = styled.div`
 const SectionTitle = styled.h4`
   margin: 0;
   font-size: 16px;
-  color: #008dd5;
+  color: var(--primary-color);
 `;
 
 const Tags = styled.div`
@@ -129,12 +129,13 @@ const Tag = styled.span`
 const Description = styled.p`
   margin: 0;
   padding: 12px;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--card-background);
   border-radius: 8px;
   line-height: 1.4;
   font-size: 15px;
   max-height: 220px;
   overflow: auto;
+  color: var(--text-color);
 `;
 
 const Actions = styled.div`
@@ -148,13 +149,14 @@ const ActionLink = styled.a`
 `;
 
 const ActionButton = styled.button`
-  background: ${(p) => (p.primary ? "#008dd5" : "transparent")};
-  color: ${(p) => (p.primary ? "#fff" : "#008dd5")};
-  border: 2px solid #008dd5;
+  background: ${(p) => (p.primary ? "var(--primary-color)" : "transparent")};
+  color: ${(p) => (p.primary ? "var(--text-color)" : "var(--primary-color)")};
+  border: 2px solid var(--primary-color);
   padding: 10px 16px;
   border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
+  transition: var(--transition);
   &:hover {
     opacity: 0.9;
   }
