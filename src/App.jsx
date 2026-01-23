@@ -33,7 +33,6 @@ const router = createBrowserRouter([
         path: "/Detail/:Id",
         element: <DetailPage></DetailPage>,
       },
-      
     ],
   },
 ]);
