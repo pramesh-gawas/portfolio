@@ -70,7 +70,9 @@ export const Header = () => {
           <span>{isDarkMode ? "Light" : "Dark"}</span>
         </ThemeToggle>
       </ul>
-      <Outlet />
+      <div className="outlet">
+        <Outlet />
+      </div>
     </Nav>
   );
 };
@@ -79,6 +81,9 @@ const Nav = styled.div`
   @media (max-width: 768px) {
     ul.nav {
       margin-top: 20px;
+    }
+    div.outlet {
+      margin-top: 120px;
     }
   }
   .nav {
