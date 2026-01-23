@@ -8,28 +8,11 @@ export const LatestProjects = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [currentPage, setCurrentPage] = useState(1);
-
-  const totalPages = projects?.totalPages || 1;
-
-  const handleNext = () => {
-    if (currentPage < totalPages) {
-      setCurrentPage((prev) => prev + 1);
-    }
-  };
-
-  const handlePrev = () => {
-    if (currentPage > 1) {
-      setCurrentPage((prev) => prev - 1);
-    }
-  };
 
   useEffect(() => {
     const fetchProjects = async () => {
-      const baseUrl =
-        import.meta.env.VITE_API_URL ||
-        "https://portfolio-backend-79t2.onrender.com";
-      const url = `${baseUrl}/admin/all-projects?page=${currentPage}`;
+      const baseUrl = import.meta.env.VITE_API_URL;
+      const url = `${baseUrl}/admin/all-projects`;
       try {
         setLoading(true);
         const data = await GetProjects(url);
@@ -46,52 +29,11 @@ export const LatestProjects = () => {
     };
 
     fetchProjects();
-  }, [currentPage]);
+  }, []);
 
   return (
     <>
       <LHeader>Latest Projects</LHeader>
-      <ul className="pagination">
-        <button
-          className="btn btn-outline-primary"
-          onClick={() => handlePrev()}
-          disabled={currentPage <= 1}
-        >
-          Prev
-        </button>
-        <li className={`page-item ${currentPage === 1 ? "active" : ""}`}>
-          <button className="page-link" onClick={() => setCurrentPage(1)}>
-            1
-          </button>
-        </li>
-        <li className={`page-item ${currentPage === 2 ? "active" : ""}`}>
-          <button className="page-link" onClick={() => setCurrentPage(2)}>
-            2
-          </button>
-        </li>
-        <li className={`page-item ${currentPage === 3 ? "active" : ""}`}>
-          <button className="page-link" onClick={() => setCurrentPage(3)}>
-            3
-          </button>
-        </li>
-        <li className={`page-item ${currentPage === 4 ? "active" : ""}`}>
-          <button className="page-link" onClick={() => setCurrentPage(4)}>
-            4
-          </button>
-        </li>
-        <li className={`page-item ${currentPage === 5 ? "active" : ""}`}>
-          <button className="page-link" onClick={() => setCurrentPage(5)}>
-            5
-          </button>
-        </li>
-        <button
-          className="btn btn-outline-primary"
-          onClick={() => handleNext()}
-          disabled={currentPage >= totalPages}
-        >
-          Next
-        </button>
-      </ul>
       <LProjects>
         {!loading && projects?.totalPages === 0 && (
           <div className="text-center p-5 text-muted">
@@ -117,15 +59,11 @@ export const LatestProjects = () => {
 };
 
 const LProjects = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   padding: 20px;
-  justify-content: center;
-  gap: 10px;
-
-  @media screen and (max-width: 768px) {
-    display: flex;
-    flex-wrap: wrap;
-  }
+  gap: 20px;
+  animation: fadeInUp 1s ease-out;
 `;
 
 const LHeader = styled.div`

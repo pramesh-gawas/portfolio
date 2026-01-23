@@ -27,7 +27,7 @@ export const About = () => {
               </p>
             </div>
 
-            <div className="col-lg-5 offset-lg-1">
+            <div className="col-lg-5 offset-lg-1 d-flex">
               <div className="card shadow-sm p-4 border-0">
                 <h4 className="mb-3">Technical Toolkit</h4>
                 <div className="d-flex flex-wrap gap-2">
@@ -133,7 +133,7 @@ export const About = () => {
             </div>
             <div className="col-md-6">
               <h3 className="mb-3">Certifications</h3>
-              <div className="p-3 border rounded bg-white">
+              <div className="p-3 border rounded bg-white text-black">
                 <h6>FastAPI - The Complete Course 2026</h6>
                 <p className=" small mb-0">Issued by Udemy • Dec 17, 2025</p>
                 <p className="small mt-2">
@@ -152,9 +152,14 @@ const AboutHeader = styled.div`
   display: flex;
   justify-content: center;
   font-size: 30px;
+  font-weight: 700;
+  margin: 70px 0 40px 0;
+  color: var(--primary-color);
+  animation: fadeInUp 0.8s ease-out;
 `;
 
 const AboutContent = styled.div`
   margin: 30px;
   font-size: 20px;
+  animation: fadeInUp 1s ease-out;
 `;
