@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { Contact } from "./Contact";
 import { LatestProjects } from "./LatestProjects";
-export const Home = ({ projects }) => {
+
+export const Home = () => {
   return (
     <>
       <Main>
@@ -60,7 +61,7 @@ export const Home = ({ projects }) => {
         </Content>
       </Main>
 
-      <LatestProjects projects={projects}></LatestProjects>
+      <LatestProjects></LatestProjects>
 
       <Contact></Contact>
     </>

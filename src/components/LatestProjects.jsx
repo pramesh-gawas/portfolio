@@ -1,55 +1,34 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import Card from "./common/Card";
-import { useState, useEffect } from "react";
-import { GetProjects } from "../apiIntegration/Api";
 import Spinner from "./common/Spinner";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchAllProjects } from "../store/projectSlice";
 export const LatestProjects = () => {
-  const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const baseUrl =
-    import.meta.env.VITE_API_URL ||
-    "https://portfolio-backend-79t2.onrender.com";
+  const ProjectData = useSelector((state) => state.projects);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    const fetchProjects = async () => {
-      const url = `${baseUrl}/admin/all-projects`;
-      try {
-        setLoading(true);
-        const data = await GetProjects(url);
-        if (data) {
-          setProjects(data);
-        } else {
-          setError("No data received");
-        }
-      } catch (err) {
-        setError("Failed to load projects");
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchProjects();
-  }, []);
-
+    dispatch(fetchAllProjects({ page: 1, limit: 6 }));
+  }, [dispatch]);
   return (
     <>
       <LHeader>Latest Projects</LHeader>
       <LProjects>
-        {!loading && projects?.totalPages === 0 && (
-          <div className="text-center p-5 text-muted">
-            <p>Add project to show</p>
-          </div>
-        )}
-        {loading ? (
+        {!ProjectData?.loading &&
+          ProjectData?.pagination?.totalResult === 0 && (
+            <div className="text-center p-5 text-muted">
+              <p>Add project to show</p>
+            </div>
+          )}
+        {ProjectData?.loading ? (
           <Spinner />
         ) : (
-          projects?.data?.map((project, index) => (
+          ProjectData?.items?.map((project, index) => (
             <Card key={index} project={project}></Card>
           ))
         )}
-        {!loading && error && (
+        {!ProjectData?.loading && ProjectData?.error && (
           <div className="text-center p-5 text-muted">
             <p>{error}</p>
           </div>
