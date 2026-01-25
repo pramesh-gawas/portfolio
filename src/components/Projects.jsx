@@ -9,7 +9,9 @@ export const Projects = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchAllProjects());
+    if (!ProjectData?.items || ProjectData.items.length === 0) {
+      dispatch(fetchAllProjects());
+    }
   }, [dispatch]);
 
   return (
