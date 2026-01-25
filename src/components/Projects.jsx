@@ -31,7 +31,7 @@ export const Projects = () => {
         )}
         {!ProjectData?.loading && ProjectData?.error && (
           <div className="text-center p-5 text-muted">
-            <p>{error}</p>
+            <p>{ProjectData?.error}</p>
           </div>
         )}
       </ProjectContainer>

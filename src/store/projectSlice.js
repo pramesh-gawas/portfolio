@@ -5,7 +5,6 @@ export const fetchAllProjects = createAsyncThunk(
   async ({ page, limit }, { rejectWithValue }) => {
     const baseUrl = import.meta.env.VITE_API_URL;
     const url = `${baseUrl}/admin/all-projects?page=${page}&limit=${limit}`;
-    console.log(url);
     try {
       const response = await fetch(url, {
         method: "GET",
@@ -19,7 +18,6 @@ export const fetchAllProjects = createAsyncThunk(
       }
 
       const data = await response.json();
-      console.log(data);
       return data;
     } catch (error) {
       return rejectWithValue(error.message);
