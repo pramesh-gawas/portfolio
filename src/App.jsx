@@ -7,6 +7,8 @@ import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { DetailPage } from "./components/DetailPage";
+import { Provider } from "react-redux";
+import Store from "./store";
 
 const router = createBrowserRouter([
   {
@@ -40,11 +42,9 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-      <RouterProvider router={router}>
-        <Header></Header>
-        <Home></Home>
-        {/* <Footer></Footer> */}
-      </RouterProvider>
+      <Provider store={Store}>
+        <RouterProvider router={router}></RouterProvider>
+      </Provider>
     </>
   );
 }
