@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const fetchAllProjects = createAsyncThunk(
   "projects/fetchAll",
-  async ({ page, limit }, { rejectWithValue }) => {
+  async ({ page=1, limit=6 }={}, { rejectWithValue }) => {
     const baseUrl =
       import.meta.env.VITE_API_URL ||
       "https://portfolio-backend-79t2.onrender.com";
