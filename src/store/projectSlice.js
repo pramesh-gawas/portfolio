@@ -3,7 +3,9 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 export const fetchAllProjects = createAsyncThunk(
   "projects/fetchAll",
   async ({ page, limit }, { rejectWithValue }) => {
-    const baseUrl = import.meta.env.VITE_API_URL;
+    const baseUrl =
+      import.meta.env.VITE_API_URL ||
+      "https://portfolio-backend-79t2.onrender.com";
     const url = `${baseUrl}/admin/all-projects?page=${page}&limit=${limit}`;
     try {
       const response = await fetch(url, {
