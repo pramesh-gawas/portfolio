@@ -9,7 +9,7 @@ export const LatestProjects = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchAllProjects({ page: 1, limit: 6 }));
+    dispatch(fetchAllProjects(git));
   }, [dispatch]);
   return (
     <>
